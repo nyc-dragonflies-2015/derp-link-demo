@@ -3,5 +3,6 @@ get '/' do
 end
 
 get '/derp-link' do
-  erb  :'_derp-link', layout: false
+  locals =  { url: rand > 0.5 ? 'http://devbootcamp.com' : 'http://stevengharms.com' }
+  erb  :'_derp-link', layout: false, locals: locals
 end
