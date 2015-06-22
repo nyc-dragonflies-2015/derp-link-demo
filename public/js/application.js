@@ -1,7 +1,10 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+  $("#insert-li").on('click', function(event) {
+    $("#list").append("<li><a class='derp-link' href='http://iluvisis.com'>derp-element</a></li>");
+  });
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $("ul").on('click', function(event) {
+    event.preventDefault();
+    console.log("event bubbling saved the day");
+  });
 });
